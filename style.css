@@ -58,12 +58,21 @@ button {
   padding: 10px;
 }
 
+.controlColor:hover {
+  background-color: #bebebe;
+  border-radius: 50px;
+}
+
 .active {
   fill: #02799D;
 }
 
 .iconActive {
   fill: white;
+}
+
+.playActive {
+  fill: green;
 }
 
 

@@ -1,4 +1,5 @@
 const buttonPlay = document.querySelector('.play');
+const btnPlayPath = document.querySelector('#playTime');
 const buttonStop = document.querySelector('.stop');
 const ButtonAddTimer = document.querySelector('.adiciona');
 const buttonDiminuiTimer = document.querySelector('.diminui');
@@ -25,12 +26,14 @@ function countdonw() {
       Number(secondsDisplay.textContent) === 0
     ) {
       clearInterval(timerTimeOut);
+      btnPlayPath.classList.remove('playActive');
       console.log('h')
   }}, 1000);
 }
 
 buttonPlay.addEventListener('click', function () {
   clearInterval(timerTimeOut)
+  btnPlayPath.classList.add('playActive');
   if (
     Number(minutesDisplay.textContent) === 0 &&
     Number(secondsDisplay.textContent) === 0
@@ -68,6 +71,7 @@ buttonDiminuiTimer.addEventListener('click', function () {
 });
 
 buttonStop.addEventListener('click', function () {
+  btnPlayPath.classList.remove('playActive');
   clearTimeout(timerTimeOut);
 });
 
