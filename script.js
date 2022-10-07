@@ -60,6 +60,7 @@ buttonDiminuiTimer.addEventListener('click', function () {
   } else {
     minutesDisplay.textContent = '00';
     secondsDisplay.textContent = '00';
+    btnPlayPath.classList.remove('playActive');
     clearInterval(timerTimeOut)
   }
 
