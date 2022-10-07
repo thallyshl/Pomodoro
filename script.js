@@ -25,6 +25,7 @@ function countdonw() {
       Number(secondsDisplay.textContent) === 0
     ) {
       clearInterval(timerTimeOut);
+      console.log('h')
   }}, 1000);
 }
 
@@ -56,6 +57,7 @@ buttonDiminuiTimer.addEventListener('click', function () {
   } else {
     minutesDisplay.textContent = '00';
     secondsDisplay.textContent = '00';
+    clearInterval(timerTimeOut)
   }
 
   if (Number(minutesDisplay.textContent) < 10) {
