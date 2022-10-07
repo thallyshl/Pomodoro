@@ -51,8 +51,8 @@ ButtonAddTimer.addEventListener('click', function () {
 });
 
 buttonDiminuiTimer.addEventListener('click', function () {
-  if (Number(minutesDisplay.textContent) >= 0) {
-    minutesDisplay.textContent = Number(minutesDisplay.textContent) - 1;
+  if (Number(minutesDisplay.textContent) >= 5) {
+    minutesDisplay.textContent = Number(minutesDisplay.textContent) - 5;
   } else {
     minutesDisplay.textContent = '00';
     secondsDisplay.textContent = '00';
