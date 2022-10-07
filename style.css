@@ -59,8 +59,12 @@ button {
 }
 
 .controlColor:hover {
-  background-color: #bebebe;
+  background-color: #d1d1d1;
   border-radius: 50px;
+}
+
+.controlSound:hover {
+  opacity: .8;
 }
 
 .active {
