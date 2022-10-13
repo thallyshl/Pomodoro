@@ -33,14 +33,15 @@ function countdonw() {
 }
 
 buttonPlay.addEventListener('click', function () {
-  clearInterval(timerTimeOut)
-  btnPlayPath.classList.add('playActive');
+  clearInterval(timerTimeOut);
+
   if (
     Number(minutesDisplay.textContent) === 0 &&
     Number(secondsDisplay.textContent) === 0
   ) {
     return;
   } else {
+    btnPlayPath.classList.add('playActive');
     countdonw();
   }
 });
