@@ -74,10 +74,7 @@ button {
   padding: 10px;
 }
 
-.controlColor:hover {
-  background-color: #eeeeee;
-  border-radius: 50px;
-}
+
 
 .controlSound:hover {
   opacity: .8;

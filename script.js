@@ -41,7 +41,8 @@ buttonPlay.addEventListener('click', function () {
   ) {
     return;
   } else {
-    btnPlayPath.classList.add('playActive');
+    path[0].classList.add('playActive');
+    path[0].classList.remove('elementsDarkMode')
     countdonw();
   }
 });
@@ -75,6 +76,9 @@ buttonDiminuiTimer.addEventListener('click', function () {
 
 buttonStop.addEventListener('click', function () {
   btnPlayPath.classList.remove('playActive');
+  if (body.classList.contains('bodyDark')) {
+    path[0].classList.add('elementsDarkMode')
+  }
   clearTimeout(timerTimeOut);
 });
 
