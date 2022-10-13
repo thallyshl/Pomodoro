@@ -92,7 +92,7 @@ button {
 }
 
 .playActive {
-  fill: green;
+  fill: rgb(73, 255, 73);
 }
 
 /* DRAKMODE */
