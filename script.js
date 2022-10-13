@@ -8,7 +8,7 @@ const secondsDisplay = document.querySelector('.seconds');
 let timerTimeOut;
 
 function countdonw() {
-  
+
   timerTimeOut = setInterval(function () {
     let seconds = Number(secondsDisplay.textContent);
     let minutes = Number(minutesDisplay.textContent);
@@ -28,7 +28,8 @@ function countdonw() {
       clearInterval(timerTimeOut);
       btnPlayPath.classList.remove('playActive');
       console.log('h')
-  }}, 1000);
+    }
+  }, 1000);
 }
 
 buttonPlay.addEventListener('click', function () {
@@ -92,7 +93,7 @@ btnFlorest.addEventListener('click', () => {
     btnFlorest.classList.add('active');
     iconFlorest.classList.add('iconActive');
     document.querySelector('#soundFlorest').play();
-    document.querySelector('#soundFlorest').loop = true ;
+    document.querySelector('#soundFlorest').loop = true;
   }
 });
 
@@ -110,7 +111,7 @@ btnCoffe.addEventListener('click', () => {
     btnCoffe.classList.add('active');
     iconCoffe.classList.add('iconActive');
     document.querySelector('#soundCoffe').play();
-    document.querySelector('#soundCoffe').loop = true ;
+    document.querySelector('#soundCoffe').loop = true;
   }
 });
 
@@ -128,7 +129,7 @@ btnRain.addEventListener('click', () => {
     btnRain.classList.add('active');
     iconRain.classList.add('iconActive');
     document.querySelector('#soundRain').play();
-    document.querySelector('#soundRain').loop = true ;
+    document.querySelector('#soundRain').loop = true;
   }
 });
 
@@ -146,6 +147,34 @@ btnFire.addEventListener('click', () => {
     btnFire.classList.add('active');
     iconFire.classList.add('iconActive');
     document.querySelector('#soundFire').play();
-    document.querySelector('#soundFire').loop = true ;
+    document.querySelector('#soundFire').loop = true;
   }
 });
+
+
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const path = document.getElementsByClassName('btnControl');
+const mode = document.querySelector('.modeLight');
+
+document.querySelector('.modeLight').addEventListener('click', () => darkMode());
+
+function darkMode() {
+  if (!body.classList.contains('bodyDark')) {
+    body.classList.add('bodyDark');
+    main.classList.add('elementsDarkMode');
+    mode.classList.add('modeDark');
+    mode.innerHTML = 'Light';
+    for (let n of path) {
+      n.classList.add('elementsDarkMode');
+    }
+  } else {
+    body.classList.remove('bodyDark');
+    main.classList.remove('elementsDarkMode');
+    mode.classList.remove('modeDark');
+    mode.innerHTML = 'Dark';
+    for (let n of path) {
+      n.classList.remove('elementsDarkMode');
+    }
+  }
+}

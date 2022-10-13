@@ -9,11 +9,27 @@ body {
   color: rgba(50, 50, 56, 1);
 }
 
+.modeLight {
+  background-color: black;
+  width: 80px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.modeDark {
+  background-color: white;
+  color: black;
+}
+
+
 .page {
   display: flex;
-  height: 100vh;
-  width: 80%;
-  margin: auto;
+  width: 100%;
+  margin-top: 100px;
   align-items: center;
   justify-content: center;
   gap: 5%;
@@ -79,6 +95,19 @@ button {
   fill: green;
 }
 
+/* DRAKMODE */
+
+.bodyDark {
+  background-color: black;
+
+}
+
+.elementsDarkMode {
+  fill: white;
+  color: white;
+}
+
+
 
 
 
@@ -103,6 +132,7 @@ button {
   .page {
     display: flex;
     flex-direction: column;
+    margin: 0;
   }
 
   span {
